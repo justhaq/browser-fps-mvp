@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser FPS MVP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Overlay UI for entering name and starting the game -->
+    <div id="menu" class="overlay">
+      <h1>Multiplayer FPS</h1>
+      <label for="nameInput">Naam:</label>
+      <input type="text" id="nameInput" placeholder="Voer je naam in" />
+      <button id="startBtn">Start</button>
+      <p class="info">Gebruik WASD om te bewegen, spatie om te springen, Ctrl om te crouchen, Klik om te schieten.</p>
+    </div>
+
+    <!-- Crosshair -->
+    <div id="crosshair">+</div>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard" class="overlay scoreboard"></div>
+
+    <!-- End screen -->
+    <div id="endScreen" class="overlay hidden">
+      <h2>Einde van de match</h2>
+      <div id="results"></div>
+      <button id="restartBtn">Speel opnieuw</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
