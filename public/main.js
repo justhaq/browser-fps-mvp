@@ -117,7 +117,8 @@ function initGame() {
   }
 
   // Networking
-  socket = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host);
+  const wsProto = location.protocol === 'https:' ? 'wss' : 'ws';
+  const socket = new WebSocket(`${wsProto}://${location.host}/ws`);
   socket.onopen = () => {
     // Initialize player state
     localState = {
